@@ -11,10 +11,11 @@ class AllListViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet var table: UITableView!
     @IBOutlet var addButton: UIButton!
+    var selectedIndex: Int!
     
     
     
-    var array = [String]()
+    var array = [[String]]()
     
     var saveData: UserDefaults = UserDefaults.standard
     
@@ -23,15 +24,7 @@ class AllListViewController: UIViewController, UITableViewDataSource, UITableVie
         
         table.delegate = self
         table.dataSource = self
-        
-        
-        // 今回はUserDefaultsに保存したデータを使うので空にする!
-        array = []
-        
-        // UserDefaultsに「空のデータ配列(array)」を
-        //        「array_data」をいう名前でセットする
-        saveData.set(array, forKey: "todo_data")
-        
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +32,7 @@ class AllListViewController: UIViewController, UITableViewDataSource, UITableVie
         
         // Viewの表示時にUserDefaultsから最新データリスト取得する
         
-        array = saveData.object(forKey: "todo_data") as! [String]
+        array = saveData.object(forKey: "todo_data_task") as! [[String]]
         // TableViewの更新
         
         table.reloadData()
@@ -49,7 +42,7 @@ class AllListViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return array.count
+        return array[selectedIndex].count
         
     }
     
@@ -57,8 +50,17 @@ class AllListViewController: UIViewController, UITableViewDataSource, UITableVie
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         
-        cell?.textLabel?.text = array[indexPath.row]
+        cell?.textLabel?.text = array[selectedIndex][indexPath.row]
         return cell!
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddTodo" {
+            let nextVC = segue.destination as! AddViewController
+            nextVC.selectedIndex = selectedIndex
+        }
+    }
+    @IBAction func tap(){
+        performSegue(withIdentifier: "AddTodo", sender: nil)
     }
 }

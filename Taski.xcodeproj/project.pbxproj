@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D05D29A2AA5C6EF00BAA1BA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D05D2992AA5C6EF00BAA1BA /* icon.png */; };
 		4D74BB462A4EEA39000F76B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74BB452A4EEA39000F76B0 /* AppDelegate.swift */; };
 		4D74BB482A4EEA39000F76B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74BB472A4EEA39000F76B0 /* SceneDelegate.swift */; };
 		4D74BB4A2A4EEA39000F76B0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74BB492A4EEA39000F76B0 /* HomeViewController.swift */; };
@@ -23,7 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D74BB422A4EEA39000F76B0 /* to do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "to do.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D05D2992AA5C6EF00BAA1BA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		4D74BB422A4EEA39000F76B0 /* Taski.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taski.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D74BB452A4EEA39000F76B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D74BB472A4EEA39000F76B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4D74BB492A4EEA39000F76B0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +64,7 @@
 		4D74BB432A4EEA39000F76B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4D74BB422A4EEA39000F76B0 /* to do.app */,
+				4D74BB422A4EEA39000F76B0 /* Taski.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,6 +85,7 @@
 				4D74BB4B2A4EEA39000F76B0 /* Main.storyboard */,
 				4D74BB4E2A4EEA3A000F76B0 /* Assets.xcassets */,
 				4D74BB502A4EEA3A000F76B0 /* LaunchScreen.storyboard */,
+				4D05D2992AA5C6EF00BAA1BA /* icon.png */,
 				4D74BB532A4EEA3A000F76B0 /* Info.plist */,
 			);
 			path = "to do";
@@ -91,9 +94,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4D74BB412A4EEA39000F76B0 /* to do */ = {
+		4D74BB412A4EEA39000F76B0 /* Taski */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D74BB562A4EEA3A000F76B0 /* Build configuration list for PBXNativeTarget "to do" */;
+			buildConfigurationList = 4D74BB562A4EEA3A000F76B0 /* Build configuration list for PBXNativeTarget "Taski" */;
 			buildPhases = (
 				4D74BB3E2A4EEA39000F76B0 /* Sources */,
 				4D74BB3F2A4EEA39000F76B0 /* Frameworks */,
@@ -103,9 +106,9 @@
 			);
 			dependencies = (
 			);
-			name = "to do";
+			name = Taski;
 			productName = "to do";
-			productReference = 4D74BB422A4EEA39000F76B0 /* to do.app */;
+			productReference = 4D74BB422A4EEA39000F76B0 /* Taski.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -123,7 +126,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4D74BB3D2A4EEA39000F76B0 /* Build configuration list for PBXProject "to do" */;
+			buildConfigurationList = 4D74BB3D2A4EEA39000F76B0 /* Build configuration list for PBXProject "Taski" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -136,7 +139,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4D74BB412A4EEA39000F76B0 /* to do */,
+				4D74BB412A4EEA39000F76B0 /* Taski */,
 			);
 		};
 /* End PBXProject section */
@@ -146,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D05D29A2AA5C6EF00BAA1BA /* icon.png in Resources */,
 				4D74BB522A4EEA3A000F76B0 /* LaunchScreen.storyboard in Resources */,
 				4D74BB802A6159F3000F76B0 /* TaskCollectionViewCell.xib in Resources */,
 				4D74BB4F2A4EEA3A000F76B0 /* Assets.xcassets in Resources */,
@@ -315,6 +319,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F9288666YP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "to do/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "タスクフォルダの写真を撮るためにカメラを起動します";
@@ -344,6 +349,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F9288666YP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "to do/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "タスクフォルダの写真を撮るためにカメラを起動します";
@@ -369,7 +375,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4D74BB3D2A4EEA39000F76B0 /* Build configuration list for PBXProject "to do" */ = {
+		4D74BB3D2A4EEA39000F76B0 /* Build configuration list for PBXProject "Taski" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D74BB542A4EEA3A000F76B0 /* Debug */,
@@ -378,7 +384,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D74BB562A4EEA3A000F76B0 /* Build configuration list for PBXNativeTarget "to do" */ = {
+		4D74BB562A4EEA3A000F76B0 /* Build configuration list for PBXNativeTarget "Taski" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D74BB572A4EEA3A000F76B0 /* Debug */,
